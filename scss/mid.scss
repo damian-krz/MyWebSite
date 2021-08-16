@@ -1,0 +1,157 @@
+@import './mixins';
+@import './colors';
+
+p {
+    font-size: 1.2rem;
+};
+
+.heading {
+    font-size: 1.8rem;
+};
+
+header {
+    .nav {
+        &__ul {
+            font-size: 1.8rem;
+        };
+
+        .scrollFollower {
+            height: .75rem;
+        };
+    };
+};
+
+main { 
+    .heroSection {
+        &__ul {
+            font-size: 1rem;
+        };
+    };
+};
+
+.aboutMeSection {
+    .aboutMeContainer {
+        &__content {
+            padding: 14rem 0rem;
+        };
+
+        &__bio {
+            padding: 1.5rem;
+            line-height: 2rem;
+        };
+
+        &__description {
+            width: 60vw;
+            padding: 1.5rem;
+            line-height: 2rem;
+        };
+    };
+};
+
+.bioSection {
+    padding: 2.5rem;
+
+    &__bgc {
+        padding: 26rem 0rem;
+    };
+
+    .bioContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+
+        &__p {
+            padding: 1.5rem;
+            line-height: 2rem;
+        };
+    };
+};
+
+.skillsSection {
+    &__bgc {
+        width: 50%;
+        padding: 26rem 0rem;
+    };
+
+    .skillsContent {  
+        &__div {
+            padding: .5rem;
+            
+            &--h2 {
+                padding: .75rem;
+                font-size: 1.2rem;
+            };
+            
+            &--percent {
+                width: 15%;
+                padding: 1.5rem;
+                font-size: 1.2rem;
+            };
+            
+            &--a {
+                font-size: 1.2rem;
+            };
+        };
+    };
+};
+
+.contactSection {
+    padding: 2.5rem;
+
+    &__phone {
+        top: 7%;
+        transform: translate(-50%, -7%);
+        padding: 1.2rem;
+        font-size: 1.2rem;
+    };
+
+    .contactForm{
+        padding: 1.5rem;
+
+        &__label {
+            padding: 1rem;
+            font-size: 1.2rem;
+        };
+        
+        &__input {
+            padding: 1rem;
+            font-size: 1.2rem;
+            @include border(border, .2rem, solid, $yellow);
+
+            &:focus {
+                @include border(border, .2rem, solid, $pink);
+            };
+        };
+
+        &__textArea {
+            width: 100%;
+            padding: 1rem;
+            font-family: "joystix";
+            font-size: 1.2rem;
+            @include border(border, .2rem, solid, $yellow);
+            
+            &:focus {
+                @include border(border, .2rem, solid, $pink);
+            };
+        };
+
+        &__button {
+            padding: 1rem;
+            font-family: "joystix";
+            font-size: 1.2rem;
+            @include border(border, .2rem, solid, $transparent);
+            
+            &:hover, &:focus {
+                @include border(border, .2rem, solid, $transparent);
+            };
+        };
+    };
+
+    .phone {
+        padding: 1.2rem;
+        font-size: 1.2rem;
+    };
+};
+

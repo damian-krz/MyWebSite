@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./public/assets/favicon.ico" />
+    <title>Damian Krzywda - Junior FrontEnd Developer</title>
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="./public/css/mid.css">
+    <link rel="stylesheet" media="screen and (min-width: 992px)" href="./public/css/large.css">
+</head>
+<body class="wrapper">
+    <header>
+        <nav class="nav">
+            <ul class="nav__ul burgerMenuNonActive">
+                <li class="nav__li">
+                    <a class="nav__a aboutMeA" href="#aboutMe">about me</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a bioA" href="#bio">bio</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a skillsA" href="#skills">skills</a>
+                </li>
+                <li class="nav__li">
+                    <a class="nav__a contactA" href="#contact">contact</a>
+                </li>
+            </ul>
+            <button class="burgerMenuBtn">
+                <div class="burgerMenuBtn__box">
+                    <div class="burgerMenuBtn__inner"></div>
+                </div>
+            </button>
+            <div class="scrollFollower"></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p>mouseover me now!</p>
+        </section>
+
+        <section class="heroSection">
+            <ul class="heroSection__ul">
+                <li class="heroSection__li">
+                    <h2>hi! my name is damian</h2> 
+                </li>
+                <li class="heroSection__li"></li>
+                <li class="heroSection__li">
+                    <h2 class="intro__h2">i want to become</h2>
+                </li>
+                <li class="heroSection__li"></li>
+                <li class="heroSection__li">
+                    <h2>junior frontend<span class="heroSection__span"> javascript </span>developer</h2>
+                </li>
+                <li class="heroSection__li"></li>
+            </ul>
+        </section>
+        
+        <section class="aboutMeSection" id="aboutMe">
+            <div class="aboutMeContainer">
+                <div class="aboutMeSection__heading heading">about me</div>
+                <div class="aboutMeContainer__content image"></div>
+                <div class="aboutMeContainer__content">
+                    <div class="aboutMeContainer__bio elementChangePosition--aboutMeSection">
+                        <p><span class="aboutMeSection__span">name:</span>damian</p>
+                        <p><span class="aboutMeSection__span">surname:</span>krzywda</p>
+                        <p><span class="aboutMeSection__span">birth date:</span>17.07.1993</p>
+                        <p><span class="aboutMeSection__span">birth place:</span>cieszyn</p>
+                        <p><span class="aboutMeSection__span">residence:</span>katowice</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutMeContainer">
+                <div class="aboutMeContainer__content"></div>
+                <div class="aboutMeContainer__content"></div>
+                <div class="aboutMeContainer__description elementChangePosition--aboutMeSection">
+                    <p>hi once again! As you probably already know, i'm looking for my first job as junior <span class="aboutMeSection__span">javascript</span> developer. welcome to my modest portfolio page. if you want to get more information about me just scroll down. there are skills section, bio section and contact form.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bioSection" id="bio">
+            <div class="bioSection__heading heading">bio</div>
+                <div class="bioSection__bgc"></div>
+                <div class="bioSection__bgc"></div>
+                <div class="bioContent elementChangePosition--bioSection">
+                    <p class="bioContent__p">
+                        These are just a few short words about me. I became interested in programming in   mid-2020. I am studying computer science on an extramural basis at <a class="bioContent__a" target="_blank" href="https://wst.com.pl/">Wyższa Szkoła Techniczna w Katowicach</a>. I finished second year of engineering studies and I'm continuing my education.</p>
+                    <p class="bioContent__p"> 
+                        My experience comes from self-study, creating my own projects and studies. I'd like to fulfill myself primarily as a frontend developer. I am determined to learn new technologies, including backend technologies.
+                    </p>
+                    <p class="bioContent__p"> 
+                        In addition to programming, I like to pay attention to non-obvious things, I have a rich imagination and learn to draw. Check out the skills section and the links there.
+                    </p>
+                </div>
+        </section>
+
+        <section class="skillsSection" id="skills">   
+            <div class="skillsSection__heading heading">skills</div>
+            <div class="skillsSection__bgc"></div>
+            <div class="skillsSection__bgc"></div>
+            <div class="skillsContent elementChangePosition--skillsSection">
+                <div class="skillsContent__div">
+                    <h2 class="skillsContent__div--h2"><span class="skillsSection__span">javascript</span></h2>
+                    <div class="skillsContent__div--percent" data-percent="60%">80%</div>
+                </div>
+                <div class="skillsContent__div">
+                    <h2 class="skillsContent__div--h2">html5, css3</h2>
+                    <div class="skillsContent__div--percent" data-percent="70%">90%</div>
+                </div>
+                <div class="skillsContent__div">
+                    <h2 class="skillsContent__div--h2">vue.js</h2>
+                    <div class="skillsContent__div--percent" data-percent="40%">50%</div>
+                </div>
+                <div class="skillsContent__div">
+                    <h2 class="skillsContent__div--h2">visual studio code, express.js, mongo.db, figma</h2>
+                </div>
+                <div class="skillsContent__div">
+                    <h2 class="skillsContent__div--h2 github">github: 
+                        <a class="skillsContent__div--a" target="_blank" href="https://github.com/damian-krz">click</a>
+                    </h2>
+                </div>
+                <div class="skillsContent__div">
+                    <h2 class="skillsContent__div--h2 linkedin">linkedin: 
+                        <a class="skillsContent__div--a" target="_blank" href="https://www.linkedin.com/in/damian-krzywda-254a8920b/">click</a>
+                    </h2>
+                </div>
+                <div class="skillsContent__cv">
+                    <div class="skillsContent__div">
+                        <h2 class="skillsContent__div--h2">design cv(eng): 
+                            <a class="skillsContent__div--a" class="skills__a" href="data/FigmaCV.pdf" download="CV">download</a>
+                        </h2>
+                    </div>
+                    <div class="skillsContent__div">
+                        <h2 class="skillsContent__div--h2">classic cv(pl): 
+                            <a class="skillsContent__div--a" class="skills__a" href="data/ClassicCV.pdf" download="CV">download</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+           
+        <section class="contactSection" id="contact">
+            <div class="contactSection__heading heading">contact</div>
+            <div class="contactSection__bgc"></div>
+            <div class="contactSection__bgc"></div>
+            <div class="contactSection__bgc"></div>
+            <div class="contactSection__bgc"></div>
+            <div class="contactSection__phone">
+                <a href="tel:726702503" class="contactSection__phone--a">call me 726-702-503</a>
+            </div>
+            <form class="contactForm" action="https://formspree.io/f/xbjqkyzo" method="POST">
+                <label class="contactForm__label contactForm__label--email"> Your email:</label>
+                <input class="contactForm__input" type="email" name="_replyto" placeholder="e-mail">
+                <label class="contactForm__label contactForm__label--message">Your message:</label>
+                <textarea class="contactForm__textArea" name="message" placeholder="message"></textarea>
+                <button class="contactForm__button" type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <script src="/js/main.js"></script>
+</body>
+</html>

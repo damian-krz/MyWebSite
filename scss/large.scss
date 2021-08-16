@@ -1,0 +1,166 @@
+@import './mixins';
+@import './colors';
+
+p {
+    font-size: 1.4rem;
+};
+
+section {
+    scroll-margin: 7.2rem;
+};
+
+.heading {
+    font-size: 2rem;
+};
+
+header {    
+    .nav {
+        &__ul {
+            left: 0;
+            height: 9.2rem;
+            margin-top: -2rem;
+            flex-direction: row;
+            font-size: 2rem;
+            transition: margin-top .15s;
+        };
+
+        &__li {
+            position: relative;
+            padding: 1rem;
+        };
+
+        .burgerMenuBtn {
+            display: none;
+        };
+
+        .scrollFollower {
+            height: 1rem;
+        };
+    };
+};
+
+main {
+    .heroSection {
+        &__ul {
+            font-size: 1.2rem;
+        };
+    };
+};
+
+.aboutMeSection {
+    .aboutMeContainer {
+        &__content {
+            padding: 16rem 0rem;
+        };
+
+        &__bio {
+            padding: 2rem;
+            line-height: 2.5rem;
+        };
+
+        &__description {
+            width: 50vw;
+            padding: 2rem;
+            line-height: 2.5rem;
+        };
+    };
+};
+
+.bioSection {
+    padding: 5rem;
+
+    &__bgc {
+        padding: 30rem 0rem;
+    };
+
+    .bioContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60vw;
+
+        &__p {
+            padding: 2rem;
+            line-height: 2.5rem;
+        };
+    };
+};
+
+.skillsSection {
+    &__bgc {
+        width: 50%;
+        padding: 30rem 0rem;
+    };
+
+    .skillsContent {  
+        &__div {
+            padding: 1rem;
+            
+            &--h2 {
+                padding: 1rem;
+                font-size: 1.4rem;
+            };
+            
+            &--percent {
+                width: 15%;
+                padding: 2rem;
+                font-size: 1.4rem;
+            };
+            
+            &--a {
+                font-size: 1.4rem;
+            };
+        };
+    };
+};
+
+.contactSection {
+    padding: 5rem;
+
+    &__bgc {
+        padding: 17rem 0rem;
+    };
+
+    &__phone {
+        top: 10%;
+        transform: translate(-50%, -10%);
+        padding: 1.5rem;
+        font-size: 1.4rem;
+        @include background-color(background-color, $grey);
+    };
+
+    .contactForm{
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+
+        &__label {
+            padding: 1.5rem;
+            font-size: 1.4rem;
+        };
+        
+        &__input {
+            padding: 1.5rem;
+            font-size: 1.4rem;
+        };
+
+        &__textArea {
+            width: 100%;
+            padding: 1.5rem;
+            font-family: "joystix";
+            font-size: 1.4rem;
+        };
+
+        &__button {
+            padding: 1.5rem;
+            font-family: "joystix";
+            font-size: 1.4rem;
+        };
+    };
+
+    .phone {
+        padding: 1.4rem;
+        font-size: 1.4rem;
+    };
+};

@@ -1,0 +1,140 @@
+p {
+  font-size: 1.2rem;
+}
+
+.heading {
+  font-size: 1.8rem;
+}
+
+header .nav__ul {
+  font-size: 1.8rem;
+}
+
+header .nav .scrollFollower {
+  height: .75rem;
+}
+
+main .heroSection__ul {
+  font-size: 1rem;
+}
+
+.aboutMeSection .aboutMeContainer__content {
+  padding: 14rem 0rem;
+}
+
+.aboutMeSection .aboutMeContainer__bio {
+  padding: 1.5rem;
+  line-height: 2rem;
+}
+
+.aboutMeSection .aboutMeContainer__description {
+  width: 60vw;
+  padding: 1.5rem;
+  line-height: 2rem;
+}
+
+.bioSection {
+  padding: 2.5rem;
+}
+
+.bioSection__bgc {
+  padding: 26rem 0rem;
+}
+
+.bioSection .bioContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80vw;
+}
+
+.bioSection .bioContent__p {
+  padding: 1.5rem;
+  line-height: 2rem;
+}
+
+.skillsSection__bgc {
+  width: 50%;
+  padding: 26rem 0rem;
+}
+
+.skillsSection .skillsContent__div {
+  padding: .5rem;
+}
+
+.skillsSection .skillsContent__div--h2 {
+  padding: .75rem;
+  font-size: 1.2rem;
+}
+
+.skillsSection .skillsContent__div--percent {
+  width: 15%;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.skillsSection .skillsContent__div--a {
+  font-size: 1.2rem;
+}
+
+.contactSection {
+  padding: 2.5rem;
+}
+
+.contactSection__phone {
+  top: 7%;
+  -webkit-transform: translate(-50%, -7%);
+          transform: translate(-50%, -7%);
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.contactSection .contactForm {
+  padding: 1.5rem;
+}
+
+.contactSection .contactForm__label {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.contactSection .contactForm__input {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 0.2rem solid #F0DB4F;
+}
+
+.contactSection .contactForm__input:focus {
+  border: 0.2rem solid #FF69B4;
+}
+
+.contactSection .contactForm__textArea {
+  width: 100%;
+  padding: 1rem;
+  font-family: "joystix";
+  font-size: 1.2rem;
+  border: 0.2rem solid #F0DB4F;
+}
+
+.contactSection .contactForm__textArea:focus {
+  border: 0.2rem solid #FF69B4;
+}
+
+.contactSection .contactForm__button {
+  padding: 1rem;
+  font-family: "joystix";
+  font-size: 1.2rem;
+  border: 0.2rem solid transparent;
+}
+
+.contactSection .contactForm__button:hover, .contactSection .contactForm__button:focus {
+  border: 0.2rem solid transparent;
+}
+
+.contactSection .phone {
+  padding: 1.2rem;
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=mid.css.map */
