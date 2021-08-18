@@ -7,16 +7,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-};
+}
 
 @font-face {
     font-family: "joystix";
     src: url("/public/assets/joystix.ttf");
-};
+}
 
 *:focus {
     outline: none;
-};
+}
 
 html {
     font-size: 62.5%;
@@ -24,30 +24,30 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     @include background-color(background-color, $pink);
-};
+}
 
 a {
     text-decoration: none;
     @include color(color, $white);
     @include transition(transition, color, .15s, ease-in-out);
-};
+}
 
 p {
     font-size: 1rem;
-};
+}
 
 span {
     @include color(color, $transparent);
     @include transition(transition, color, 1s, ease-in-out);
-};
+}
 
 section {
     scroll-margin: 9.2rem;
-};
+}
 
 .sectionActive {
     @include color(color, $grey);
-};
+}
 
 .heading {
     position: absolute;
@@ -58,7 +58,7 @@ section {
     align-items: center;
     font-size: 1.6rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out;
-};
+}
 
 header {
     position: fixed;
@@ -85,12 +85,12 @@ header {
             list-style: none;
             @include background-color(background-color, $pink);
             transition: right .15s ease-in-out, top .15s ease-in-out, height .15s ease-in-out;
-        };
+        }
 
         &__li {
             position: relative;
             padding: 1rem;
-        };
+        }
 
         &__a {
             padding: 1rem;
@@ -105,16 +105,16 @@ header {
                 content: "";
                 @include background-color(background-color, $grey);
                 @include transition(transition, width, .15s, ease-in-out);
-            };
+            }
 
             &:hover, &:focus {
                 @include color(color, $grey);
                 
                 &:after{
                     width: 80%;
-                };
-            };
-        };
+                }
+            }
+        }
 
         .burgerMenuBtn {
             padding: .5rem;
@@ -125,7 +125,7 @@ header {
             
             &:focus {
                 @include border(border, .1rem, solid, $grey);
-            };
+            }
             
             &:hover {
                 .burgerMenuBtn__inner {
@@ -133,14 +133,14 @@ header {
                 } 
                 .burgerMenuBtn__inner:before, .burgerMenuBtn__inner:after {
                     @include background-color(background-color, $grey);
-                };
-            };
+                }
+            }
             
             &__box {
                 position: relative;
                 width: 4rem;
                 height: 4rem;
-            };
+            }
             
             &__inner {
                 top: 50%;
@@ -150,28 +150,28 @@ header {
                 &:before {
                     top: -1rem;
                     @include burgerMenuBtn-line();
-                };
+                }
                 
                 &:after {
                     top: 1rem;
                     @include burgerMenuBtn-line();
-                };
-            };
+                }
+            }
             
             &--active  {
                 .burgerMenuBtn__inner {
                     @include background-color(background-color, $transparent);
-                };
+                }
 
                 .burgerMenuBtn__inner:before {
                     top: 0;
-                }; 
+                }
                 
                 .burgerMenuBtn__inner:after {
                     top: 0;
-                };
-            };
-        };
+                }
+            }
+        }
 
         .scrollFollower {
             position: fixed;
@@ -181,17 +181,17 @@ header {
             height: .5rem;
             @include background-color(background-color, $pink);
             @include transition(transition, background-color, .5s, ease-in-out);
-        };
-    };
-};
+        }
+    }
+}
 
 .burgerMenuNonActive {
     right: -100%;
-};
+}
 
 .burgerMenuActive {
     right: 0;
-};
+}
 
 main {
     .intro {
@@ -204,7 +204,7 @@ main {
         justify-content: center;
         align-items: center;
         @include color(color, $white)
-    };
+    }
     
     .heroSection {
         height: 100vh;
@@ -216,7 +216,7 @@ main {
             display: flex;
             flex-direction: column;
             font-size: .8rem;
-        };
+        }
         
         &__li {
             width: 0;
@@ -229,18 +229,18 @@ main {
 
             &:nth-child(4n+1) {
                 @include background-color(background-color, $grey);
-            };
+            }
             
             &:nth-child(2n+2) {
                 @include background-color(background-color, $yellow);
-            };
+            }
             
             &:nth-child(3n+3) {
                 @include background-color(background-color, $pink);
-            };
-        };
-    };
-};
+            }
+        }
+    }
+}
 
 .aboutMeSection {
     display: grid;
@@ -261,7 +261,7 @@ main {
             background-size: contain;
             @include background-color(background-color, $grey);
             @include transition(transition, width, .5s, ease-in-out);
-        };
+        }
 
         &__content {
             position: relative;
@@ -272,12 +272,12 @@ main {
 
             &:nth-child(2) {
                 @include background-color(background-color, $grey);
-            };
+            }
 
             &:nth-child(3) {
                 @include background-color(background-color, $yellow);
-            };
-        };
+            }
+        }
 
         &__bio {
             position: absolute;
@@ -291,8 +291,8 @@ main {
 
                 p {
                     @include color(color, $pink)
-                };
-        };
+                }
+        }
 
         &__description {
             position: absolute;
@@ -307,10 +307,10 @@ main {
 
             p {
                 @include color(color, $pink)
-            };
-        };
-    };
-};
+            }
+        }
+    }
+}
 
 .bioSection {
     position: relative;
@@ -324,12 +324,12 @@ main {
 
         &:nth-child(3) {
             @include background-color(background-color, $yellow);
-        };
+        }
 
         &:nth-child(2) {
             @include background-color(background-color, $grey);
-        };
-    };
+        }
+    }
     
     .bioContent {
         position: absolute;
@@ -342,27 +342,27 @@ main {
         &__p {
             padding: 1rem;
             line-height: 1.75rem;
-        };
+        }
 
         &__p:nth-child(odd) {
             @include color(color, $grey);
             @include background-color(background-color, $yellow);
-        };
+        }
 
         &__p:nth-child(even) {
             @include color(color, $pink);
             @include background-color(background-color, $grey);
-        };
+        }
 
         &__a {
             @include color(color, $blue);
 
             &:hover, &:focus {
                 @include color(color, $pink);
-            };
-        };
-    };
-};
+            }
+        }
+    }
+}
 
 .skillsSection {
     position: relative;
@@ -375,12 +375,12 @@ main {
         
         &:nth-child(3) {
             @include background-color(background-color, $grey);
-        };
+        }
 
         &:nth-child(2) {
             @include background-color(background-color, $yellow);
-        };
-    };
+        }
+    }
 
     .skillsContent {
         position: absolute;
@@ -397,7 +397,7 @@ main {
         &__cv {
             display: flex;
             justify-content: space-evenly;
-        };
+        }
         
         &__div {
             display: flex;
@@ -409,7 +409,7 @@ main {
                 padding: .5rem;
                 font-size: 1rem;
                 @include color(color, $pink);
-            };
+            }
             
             &--percent {
                 width: 10%;
@@ -419,26 +419,26 @@ main {
                 @include color(color, $grey);
                 @include background-color(background-color, $pink);
                 @include transition(transition, width, .5s, ease-in-out);
-            };
+            }
 
             &--a {
                 font-size: 1rem;
 
                 &:hover, &:focus {
                     @include color(color, $yellow);
-                };
-            };
+                }
+            }
 
             .github {
                 @include color(color, $github);
-            };
+            }
 
             .linkedin {
                 @include color(color, $linkedin);
-            };
-        };
-    };
-};
+            }
+        }
+    }
+}
 
 .contactSection {
     position: relative;
@@ -452,12 +452,12 @@ main {
 
         &:nth-child(3) {
             @include background-color(background-color, $yellow);
-        };
+        }
 
         &:nth-child(3n+2) {
             @include background-color(background-color, $grey);
-        };
-    };
+        }
+    }
 
     &__phone {
         position: absolute;
@@ -471,9 +471,9 @@ main {
         &--a {
             &:hover, &:focus {
                 @include color(color, $yellow);
-            };
-        };
-    };
+            }
+        }
+    }
 
     .contactForm {
         position: absolute;
@@ -494,13 +494,13 @@ main {
            &--email {
                 @include color(color, $grey);
                 @include background-color(background-color, $yellow);
-           };
+           }
 
            &--message {
                 @include color(color, $pink);
                 @include background-color(background-color, $grey);
-           };
-        };
+           }
+        }
         
         &__input {
             width: 100%;
@@ -513,8 +513,8 @@ main {
 
             &:focus {
                 @include border(border, .1rem, solid, $pink);
-            };
-        };
+            }
+        }
 
         &__textArea {
             width: 100%;
@@ -529,8 +529,8 @@ main {
             
             &:focus {
                 @include border(border, .1rem, solid, $pink);
-            };
-        };
+            }
+        }
 
         &__button {
             width: 50%;
@@ -548,7 +548,7 @@ main {
                 @include color(color, $pink);
                 @include background-color(background-color, $grey);
                 @include border(border, .1rem, solid, $transparent);
-            };
-        };
-    };
-};
+            }
+        }
+    }
+}
