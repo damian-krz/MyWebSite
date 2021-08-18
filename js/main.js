@@ -1,6 +1,10 @@
+'use strict';
+
 // ------------------------------------------------------- VARIABLES //
 
 // SECTIONS // 
+
+let $body; 
 
 let $heroSection;
 let $heroSectionLi;
@@ -48,10 +52,6 @@ let $elementChangePositionAboutMeSection;
 let $elementChangePositionBioSection;
 let $elementChangePositionSkillsSection;
 let $scrollFollower;
-
-
-
-let $body;
 
 // ------------------------------------------------------- INITIALIZE FUNCTIONS //
 
@@ -186,9 +186,9 @@ const changeHeadingStyle = (section, heading) => {
     };
 
     if(heading.offsetHeight > 20) {
-        heading.style.zIndex = "1";
+        heading.style.zIndex = '1';
     } else {
-        heading.style.zIndex = "-1";
+        heading.style.zIndex = '-1';
     }
 };
 
@@ -206,9 +206,9 @@ const changePercentSkillsWidth = (heading, percent) => {
 
 const changeNavBarPadding = (nav) => {
     if(window.pageYOffset > 72) {
-        nav.style.padding = "1rem 2rem";
+        nav.style.padding = '1rem 2rem';
     } else {
-        nav.style.padding = "2rem 2rem";
+        nav.style.padding = '2rem 2rem';
     };
 };
 
@@ -223,16 +223,16 @@ const changeNavBarButtonColor = (heading, navA, section) => {
 const changeSpanColor = (heading, span) => {
     if(heading.getBoundingClientRect().top < 72) {
         span.forEach((e) => {
-            e.style.color = "#F0DB4F";
+            e.style.color = '#F0DB4F';
         });
     };
 };
 
 const changeImageWidth = (heading, image) => {
     if(heading.getBoundingClientRect().top < 72) {
-        image.style.width = "100%";
+        image.style.width = '100%';
     } else {
-        image.style.width = "0";
+        image.style.width = '0';
     };
 };
 
@@ -243,7 +243,7 @@ const changeElementVerticalPosition = (section, element) => {
         });
     } else {
         element.forEach((e) => {
-            e.style.top = "50%";
+            e.style.top = '50%';
         });
     };
 };
@@ -255,7 +255,7 @@ const changeElementHorizontalFromRightPosition = (heading, element) => {
         });
     } else {
         element.forEach((e) => {
-            e.style.left = "150%";
+            e.style.left = '150%';
         });
     };
 };
@@ -267,18 +267,18 @@ const changeElementHorizontalFromLefttPosition = (heading, element) => {
         });
     } else {
         element.forEach((e) => {
-            e.style.left = "-150%";
+            e.style.left = '-150%';
         });
     };
 };
 
 const introAnimation = (heroSectionLi, heroSectionSpan) => { 
     heroSectionLi.forEach((e) => {
-        e.style.width = "100%";
-        e.style.color = "#f9f9f9";
+        e.style.width = '100%';
+        e.style.color = '#f9f9f9';
     });
 
-    heroSectionSpan.style.color = "#F0DB4F";
+    heroSectionSpan.style.color = '#F0DB4F';
 };
 
 const burgerMenuAnimation = (navBarUl, burgerMenuButton) => {
@@ -306,16 +306,16 @@ const scrollFollowing = (scrollFollower, body) => {
     scrollFollower.style.width = `${percentH * 1.45}%`;
     
     if(scrollFollower.offsetWidth < width / 4) {
-        scrollFollower.style.backgroundColor = "#F9F9F9";
+        scrollFollower.style.backgroundColor = '#F9F9F9';
     } else if(scrollFollower.offsetWidth < width / 2) {
-        scrollFollower.style.backgroundColor = "#F0DB4F";
+        scrollFollower.style.backgroundColor = '#F0DB4F';
     } else if(scrollFollower.offsetWidth < width) {
-        scrollFollower.style.backgroundColor = "#323330";
+        scrollFollower.style.backgroundColor = '#323330';
     } else {
-        scrollFollower.style.backgroundColor = "#FF69B4";
+        scrollFollower.style.backgroundColor = '#FF69B4';
     }
 };
 
 // ------------------------------------------------------- DOM CONTENT LOADED //
 
-document.addEventListener("DOMContentLoaded", initialize);
+document.addEventListener('DOMContentLoaded', initialize);

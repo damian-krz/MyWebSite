@@ -472,11 +472,10 @@ main {
             &:hover, &:focus {
                 @include color(color, $yellow);
             };
-    
-        }
+        };
     };
 
-    .contactForm{
+    .contactForm {
         position: absolute;
         top: 60%;
         left: 50%;
