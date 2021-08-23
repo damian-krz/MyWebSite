@@ -23,3 +23,7 @@
 @mixin transition($transition, $element, $time, $type) {
     #{$transition}: $element $time $type;
 };
+
+@mixin shadow($shadow, $color) {
+    #{$shadow}: .25rem .2rem $color;
+};

@@ -42,8 +42,8 @@ let $contactA;
 
 // SPANS //
 
-let $heroSectionSpan;
-let $aboutMeSectionSpan;
+let $introSpan;
+let $descriptionSpan;
 let $skillsSectionSpan;
 
 // ELEMENTS - CHANGES ON SCROLL // 
@@ -101,8 +101,8 @@ const prepareDomElements = () => {
 
     // SPANS //
 
-    $heroSectionSpan = document.querySelector('.heroSection__span');
-    $aboutMeSectionSpan = document.querySelectorAll('.aboutMeSection__span');
+    $introSpan = document.querySelector('.intro__span');
+    $descriptionSpan = document.querySelector('.description__span');
     $skillsSectionSpan = document.querySelectorAll('.skillsSection__span');
 
     // ELEMENTS - CHANGES ON SCROLL // 
@@ -130,8 +130,7 @@ const prepareDomEvents = () => {
         changeNavBarButtonColor($bioSectionHeading, $bioA, $bioSection);
         changeNavBarButtonColor($skillsSectionHeading, $skillsA, $skillsSection);
         changeNavBarButtonColor($contactSectionHeading, $contactA, $contactSection);
-        changeSpanColor($aboutMeSectionHeading, $aboutMeSectionSpan);
-        changeSpanColor($skillsSectionHeading, $skillsSectionSpan);
+        changeSpanColor($aboutMeSectionHeading, $descriptionSpan);
         changeImageWidth($aboutMeSectionHeading, $image);
         changeElementVerticalPosition($aboutMeSection, $elementChangePositionAboutMeSection);
         changeElementVerticalPosition($bioSection, $elementChangePositionBioSection);
@@ -142,11 +141,11 @@ const prepareDomEvents = () => {
     });
 
     window.addEventListener('mouseover', () => {
-        introAnimation($heroSectionLi, $heroSectionSpan);
+        introAnimation($heroSectionLi, $introSpan);
     });
 
     window.addEventListener('click', () => {
-        introAnimation($heroSectionLi, $heroSectionSpan);
+        introAnimation($heroSectionLi, $introSpan);
     });
 
     $burgerMenuButton.addEventListener('click', () => {
@@ -179,7 +178,7 @@ const changeHeadingStyle = (section, heading) => {
     
     if(heading.getBoundingClientRect().top < 72) {
         heading.style.backgroundColor = '#FF69B4';
-        heading.style.color = '#f9f9f9';
+        heading.style.color = '#F9F9F9';
     } else {
         heading.style.backgroundColor = '#323330';
         heading.style.color = '#FF69B4';
@@ -187,8 +186,10 @@ const changeHeadingStyle = (section, heading) => {
 
     if(heading.offsetHeight > 20) {
         heading.style.zIndex = '1';
+        heading.style.textShadow = '.2rem .2rem rgb(150, 54, 97)';
     } else {
         heading.style.zIndex = '-1';
+        heading.style.textShadow = '.2rem .2rem transparent';
     }
 };
 
@@ -222,9 +223,7 @@ const changeNavBarButtonColor = (heading, navA, section) => {
 
 const changeSpanColor = (heading, span) => {
     if(heading.getBoundingClientRect().top < 72) {
-        span.forEach((e) => {
-            e.style.color = '#F0DB4F';
-        });
+        span.style.color = '#F0DB4F';
     };
 };
 
@@ -275,7 +274,8 @@ const changeElementHorizontalFromLefttPosition = (heading, element) => {
 const introAnimation = (heroSectionLi, heroSectionSpan) => { 
     heroSectionLi.forEach((e) => {
         e.style.width = '100%';
-        e.style.color = '#f9f9f9';
+        e.style.color = '#F9F9F9';
+        e.style.textShadow = '2px 2px rgb(150, 54, 97)';
     });
 
     heroSectionSpan.style.color = '#F0DB4F';
@@ -307,15 +307,30 @@ const scrollFollowing = (scrollFollower, body) => {
     
     if(scrollFollower.offsetWidth < width / 4) {
         scrollFollower.style.backgroundColor = '#F9F9F9';
+        scrollFollower.style.boxShadow = '2px 2px rgb(150, 54, 97)';
     } else if(scrollFollower.offsetWidth < width / 2) {
         scrollFollower.style.backgroundColor = '#F0DB4F';
+        scrollFollower.style.boxShadow = '2px 2px rgb(150, 54, 97)';
     } else if(scrollFollower.offsetWidth < width) {
         scrollFollower.style.backgroundColor = '#323330';
+        scrollFollower.style.boxShadow = '2px 2px rgb(150, 54, 97)';
     } else {
         scrollFollower.style.backgroundColor = '#FF69B4';
+        scrollFollower.style.boxShadow = '2px 2px transparent';
     }
 };
 
 // ------------------------------------------------------- DOM CONTENT LOADED //
 
 document.addEventListener('DOMContentLoaded', initialize);
+
+// ------------------------------------------------------- COLORS PALETTE //
+
+/*
+
+#F0DB4F = $yellow;
+#323330 = $grey;
+#FF69B4 = $pink;
+#F9F9F9 = $white;
+
+*/

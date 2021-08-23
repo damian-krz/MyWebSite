@@ -26,27 +26,19 @@ html {
     @include background-color(background-color, $pink);
 }
 
-a {
-    text-decoration: none;
-    @include color(color, $white);
-    @include transition(transition, color, .15s, ease-in-out);
-}
-
-p {
-    font-size: 1rem;
-}
-
-span {
-    @include color(color, $transparent);
-    @include transition(transition, color, 1s, ease-in-out);
-}
-
 section {
     scroll-margin: 9.2rem;
 }
 
-.sectionActive {
-    @include color(color, $grey);
+p {
+    font-size: 1rem;
+    @include shadow(text-shadow, $pink-shadow);
+}
+
+a {
+    text-decoration: none;
+    @include color(color, $white);
+    @include transition(transition, color, .15s, ease-in-out);
 }
 
 .heading {
@@ -94,6 +86,7 @@ header {
 
         &__a {
             padding: 1rem;
+            @include shadow(text-shadow, $pink-shadow);
 
             &:after {
                 position: absolute;
@@ -131,6 +124,7 @@ header {
                 .burgerMenuBtn__inner {
                     @include background-color(background-color, $pink);
                 } 
+
                 .burgerMenuBtn__inner:before, .burgerMenuBtn__inner:after {
                     @include background-color(background-color, $grey);
                 }
@@ -146,15 +140,18 @@ header {
                 top: 50%;
                 transform: translateY(-50%);
                 @include burgerMenuBtn-line();
+                @include shadow(box-shadow, $pink-shadow);
                 
                 &:before {
                     top: -1rem;
                     @include burgerMenuBtn-line();
+                    @include shadow(box-shadow, $pink-shadow);
                 }
                 
                 &:after {
                     top: 1rem;
                     @include burgerMenuBtn-line();
+                    @include shadow(box-shadow, $pink-shadow);
                 }
             }
             
@@ -180,7 +177,7 @@ header {
             width: 0;
             height: .5rem;
             @include background-color(background-color, $pink);
-            @include transition(transition, background-color, .5s, ease-in-out);
+            transition: background-color .25s ease-in-out, box-shadow .25s ease-in-out;
         }
     }
 }
@@ -225,7 +222,8 @@ main {
             justify-content: center;
             align-items: center;
             @include color(color, $transparent);
-            transition: width .5s ease-in-out, color 1s ease-in-out;
+            @include shadow(text-shadow, $transparent);
+            transition: width .5s ease-in-out, color 1s ease-in-out, text-shadow 1s ease-in-out;
 
             &:nth-child(4n+1) {
                 @include background-color(background-color, $grey);
@@ -246,6 +244,10 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+
+    &__span {
+        @include color(color, $yellow);
+    }
 
     .aboutMeContainer {
         position: relative;
@@ -287,6 +289,7 @@ main {
             padding: 1rem;
             line-height: 1.5rem;
             @include background-color(background-color, $grey);
+            @include shadow(box-shadow, $pink-shadow);
             transition: top .5s ease-in-out, left .5s ease-in-out;
 
                 p {
@@ -303,6 +306,7 @@ main {
             padding: 1rem;
             line-height: 1.5rem;
             @include background-color(background-color, $grey);
+            @include shadow(box-shadow, $pink-shadow);
             transition: left .5s ease-in-out, top .5s ease-in-out;
 
             p {
@@ -337,6 +341,7 @@ main {
         left: -150%;
         transform: translate(-50%, -50%);
         width: 80vw;
+        @include shadow(box-shadow, $pink-shadow);
         transition: top .5s ease-in-out, left .5s ease-in-out;
 
         &__p {
@@ -347,6 +352,7 @@ main {
         &__p:nth-child(odd) {
             @include color(color, $grey);
             @include background-color(background-color, $yellow);
+            @include shadow(text-shadow, $grey-shadow);
         }
 
         &__p:nth-child(even) {
@@ -355,7 +361,7 @@ main {
         }
 
         &__a {
-            @include color(color, $blue);
+            @include color(color, $wst);
 
             &:hover, &:focus {
                 @include color(color, $pink);
@@ -392,6 +398,7 @@ main {
         flex-direction: column;
         padding: 1rem;
         @include background-color(background-color, $grey);
+        @include shadow(box-shadow, $pink-shadow);
         transition: left .5s ease-in-out, top .5s ease-in-out;
         
         &__cv {
@@ -409,6 +416,7 @@ main {
                 padding: .5rem;
                 font-size: 1rem;
                 @include color(color, $pink);
+                @include shadow(text-shadow, $pink-shadow);
             }
             
             &--percent {
@@ -418,6 +426,7 @@ main {
                 font-size: 1rem;
                 @include color(color, $grey);
                 @include background-color(background-color, $pink);
+                @include shadow(box-shadow, $pink-shadow);
                 @include transition(transition, width, .5s, ease-in-out);
             }
 
@@ -429,12 +438,45 @@ main {
                 }
             }
 
-            .github {
-                @include color(color, $github);
+            .js-color {
+                @include color(color, $yellow);
+                @include shadow(text-shadow, $js-shadow);
             }
-
-            .linkedin {
+            .html-color {
+                @include color(color, $html);
+                @include shadow(text-shadow, $html-shadow);
+            }
+            .css-color {
+                @include color(color, $css);
+                @include shadow(text-shadow, $css-shadow);
+            }
+            .vue-color {
+                @include color(color, $vue);
+                @include shadow(text-shadow, $vue-shadow);
+            }
+            .vsc-color {
+                @include color(color, $vsc);
+                @include shadow(text-shadow, $vsc-shadow);
+            }
+            .express-color {
+                @include color(color, $express);
+                @include shadow(text-shadow, $express-shadow);
+            }
+            .mongo-color {
+                @include color(color, $mongo);
+                @include shadow(text-shadow, $mongo-shadow);
+            }
+            .figma-color {
+                @include color(color, $figma);
+                @include shadow(text-shadow, $figma-shadow);
+            }
+            .github-color {
+                @include color(color, $github);
+                @include shadow(text-shadow, $github-shadow);
+            }
+            .linkedin-color {
                 @include color(color, $linkedin);
+                @include shadow(text-shadow, $linkedin-shadow);
             }
         }
     }
@@ -467,8 +509,11 @@ main {
         padding: 1rem;
         font-size: 1rem;
         @include background-color(background-color, $grey);
+        @include shadow(box-shadow, $pink-shadow);
 
         &--a {
+            @include shadow(text-shadow, $pink-shadow);
+
             &:hover, &:focus {
                 @include color(color, $yellow);
             }
@@ -486,20 +531,33 @@ main {
         flex-direction: column;
         align-items: center;
         padding: 1rem;
+        
 
         &__label {
+            margin: .15rem 0rem;
             padding: .75rem;
             font-size: 1rem;
+            @include shadow(box-shadow, $pink-shadow);
+            
+            &:nth-child(1) {
+                @include shadow(text-shadow, $grey-shadow);
+            }
+            
+            &:nth-child(3) {
+                @include shadow(text-shadow, $pink-shadow);
+            }
 
-           &--email {
+            &--email {
                 @include color(color, $grey);
                 @include background-color(background-color, $yellow);
-           }
+                @include shadow(box-shadow, $pink-shadow);
+            }
 
-           &--message {
+            &--message {
                 @include color(color, $pink);
                 @include background-color(background-color, $grey);
-           }
+                @include shadow(box-shadow, $pink-shadow);
+            }
         }
         
         &__input {
@@ -510,6 +568,7 @@ main {
             @include color(color, $pink);
             @include background-color(background-color, $grey);
             @include border(border, .1rem, solid, $yellow);
+            @include shadow(box-shadow, $pink-shadow);
 
             &:focus {
                 @include border(border, .1rem, solid, $pink);
@@ -526,6 +585,7 @@ main {
             @include color(color, $pink);
             @include background-color(background-color, $grey);
             @include border(border, .1rem, solid, $yellow);
+            @include shadow(box-shadow, $pink-shadow);
             
             &:focus {
                 @include border(border, .1rem, solid, $pink);
@@ -541,6 +601,8 @@ main {
             @include color(color, $grey);
             @include background-color(background-color, $yellow);
             @include border(border, .1rem, solid, $transparent);
+            @include shadow(text-shadow, $grey-shadow);
+            @include shadow(box-shadow, $pink-shadow);
             transition: color .15s ease-in-out, background-color .15s ease-in-out;
             
             &:hover, &:focus {
@@ -551,4 +613,13 @@ main {
             }
         }
     }
+}
+
+.sectionActive {
+    @include color(color, $grey);
+}
+
+.intro__span, .description__span {
+    @include color(color, $transparent);
+    @include transition(transition, color, 2s, ease-in-out);
 }
