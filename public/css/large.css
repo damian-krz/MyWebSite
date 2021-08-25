@@ -50,7 +50,7 @@ main .heroSection__ul {
 }
 
 .aboutMeSection .aboutMeContainer__description {
-  width: 50vw;
+  width: 60vw;
   padding: 2rem;
   line-height: 2.5rem;
 }
@@ -79,7 +79,11 @@ main .heroSection__ul {
 
 .skillsSection__bgc {
   width: 50%;
-  padding: 30rem 0rem;
+  padding: 33rem 0rem;
+}
+
+.skillsSection .skillsContent {
+  width: 70vw;
 }
 
 .skillsSection .skillsContent__div {
@@ -110,9 +114,9 @@ main .heroSection__ul {
 }
 
 .contactSection__phone {
-  top: 10%;
-  -webkit-transform: translate(-50%, -10%);
-          transform: translate(-50%, -10%);
+  top: 14%;
+  -webkit-transform: translate(-50%, -14%);
+          transform: translate(-50%, -14%);
   padding: 1.5rem;
   font-size: 1.4rem;
   background-color: #323330;
@@ -123,6 +127,7 @@ main .heroSection__ul {
   left: 50%;
   -webkit-transform: translate(-50%, -65%);
           transform: translate(-50%, -65%);
+  width: 60vw;
 }
 
 .contactSection .contactForm__label {

@@ -5,6 +5,7 @@
 // SECTIONS // 
 
 let $body; 
+let $intro;
 
 let $heroSection;
 let $heroSectionLi;
@@ -53,6 +54,7 @@ let $elementChangePositionBioSection;
 let $elementChangePositionSkillsSection;
 let $scrollFollower;
 
+
 // ------------------------------------------------------- INITIALIZE FUNCTIONS //
 
 const initialize = () => {
@@ -64,6 +66,9 @@ const initialize = () => {
 
 const prepareDomElements = () => { 
     // SECTIONS // 
+
+    $body = document.querySelector('body');
+    $intro = document.querySelector('.intro');
 
     $heroSection = document.querySelector('.heroSection');
     $heroSectionLi = document.querySelectorAll('.heroSection__li');
@@ -111,9 +116,7 @@ const prepareDomElements = () => {
     $elementChangePositionBioSection = document.querySelectorAll('.elementChangePosition--bioSection');
     $elementChangePositionSkillsSection = document.querySelectorAll('.elementChangePosition--skillsSection');
     $scrollFollower = document.querySelector('.scrollFollower');
-
-
-    $body = document.querySelector('body');
+    
 };
 
 // ------------------------------------------------------- PREPARE DOM EVENTS //
@@ -142,10 +145,12 @@ const prepareDomEvents = () => {
 
     window.addEventListener('mouseover', () => {
         introAnimation($heroSectionLi, $introSpan);
+        $intro.style.zIndex = '0';
     });
 
-    window.addEventListener('click', () => {
+    $intro.addEventListener('touchstart', () => {
         introAnimation($heroSectionLi, $introSpan);
+        $intro.style.zIndex = '0';
     });
 
     $burgerMenuButton.addEventListener('click', () => {

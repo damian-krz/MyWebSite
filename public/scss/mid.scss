@@ -41,7 +41,7 @@ main {
         }
 
         &__description {
-            width: 60vw;
+            width: 90vw;
             padding: 1.5rem;
             line-height: 2rem;
         }
@@ -51,16 +51,12 @@ main {
 .bioSection {
     padding: 2.5rem;
 
-    &__bgc {
-        padding: 26rem 0rem;
-    }
-
     .bioContent {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 80vw;
+        width: 85vw;
 
         &__p {
             padding: 1.5rem;
@@ -76,6 +72,7 @@ main {
     }
 
     .skillsContent {  
+        width: 90vw;
         &__div {
             padding: .5rem;
             
@@ -101,13 +98,17 @@ main {
     padding: 2.5rem;
 
     &__phone {
-        top: 7%;
+        top: 9%;
         transform: translate(-50%, -7%);
         padding: 1.2rem;
         font-size: 1.2rem;
     }
 
-    .contactForm{
+    .contactForm {
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        width: 85vw;
         padding: 1.5rem;
 
         &__label {

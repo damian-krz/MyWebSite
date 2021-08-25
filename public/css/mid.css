@@ -28,7 +28,7 @@ main .heroSection__ul {
 }
 
 .aboutMeSection .aboutMeContainer__description {
-  width: 60vw;
+  width: 90vw;
   padding: 1.5rem;
   line-height: 2rem;
 }
@@ -37,17 +37,13 @@ main .heroSection__ul {
   padding: 2.5rem;
 }
 
-.bioSection__bgc {
-  padding: 26rem 0rem;
-}
-
 .bioSection .bioContent {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 80vw;
+  width: 85vw;
 }
 
 .bioSection .bioContent__p {
@@ -58,6 +54,10 @@ main .heroSection__ul {
 .skillsSection__bgc {
   width: 50%;
   padding: 26rem 0rem;
+}
+
+.skillsSection .skillsContent {
+  width: 90vw;
 }
 
 .skillsSection .skillsContent__div {
@@ -84,7 +84,7 @@ main .heroSection__ul {
 }
 
 .contactSection__phone {
-  top: 7%;
+  top: 9%;
   -webkit-transform: translate(-50%, -7%);
           transform: translate(-50%, -7%);
   padding: 1.2rem;
@@ -92,6 +92,11 @@ main .heroSection__ul {
 }
 
 .contactSection .contactForm {
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -65%);
+          transform: translate(-50%, -65%);
+  width: 85vw;
   padding: 1.5rem;
 }
 
