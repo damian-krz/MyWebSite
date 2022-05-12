@@ -81,7 +81,7 @@ header {
 
         &__li {
             position: relative;
-            padding: 1rem;
+            padding: 1rem;  
         }
 
         &__a {
@@ -191,6 +191,8 @@ header {
 }
 
 main {
+    overflow-x: hidden;
+    
     .intro {
         position: absolute;
         top: 0;
@@ -348,6 +350,7 @@ main {
         &__p {
             padding: 1rem;
             line-height: 1.75rem;
+            text-align: justify;
         }
 
         &__p:nth-child(odd) {
@@ -439,7 +442,11 @@ main {
                     @include color(color, $yellow);
                 }
             }
-
+            
+            .php-color {
+                @include color(color, $php);
+                @include shadow(text-shadow, $php-shadow);
+            }
             .js-color {
                 @include color(color, $yellow);
                 @include shadow(text-shadow, $js-shadow);
@@ -464,9 +471,9 @@ main {
                 @include color(color, $express);
                 @include shadow(text-shadow, $express-shadow);
             }
-            .mongo-color {
-                @include color(color, $mongo);
-                @include shadow(text-shadow, $mongo-shadow);
+            .cypress-color {
+                @include color(color, $cypress);
+                @include shadow(text-shadow, $cypress-shadow);
             }
             .figma-color {
                 @include color(color, $figma);
@@ -480,6 +487,7 @@ main {
                 @include color(color, $linkedin);
                 @include shadow(text-shadow, $linkedin-shadow);
             }
+
         }
     }
 }

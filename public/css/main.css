@@ -238,6 +238,10 @@ header .nav .scrollFollower {
   right: 0;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 main .intro {
   position: absolute;
   top: 0;
@@ -440,6 +444,7 @@ main .heroSection__li:nth-child(3n+3) {
 .bioSection .bioContent__p {
   padding: 1rem;
   line-height: 1.75rem;
+  text-align: justify;
 }
 
 .bioSection .bioContent__p:nth-child(odd) {
@@ -558,6 +563,11 @@ main .heroSection__li:nth-child(3n+3) {
   color: #F0DB4F;
 }
 
+.skillsSection .skillsContent__div .php-color {
+  color: #7377AD;
+  text-shadow: 0.25rem 0.2rem #545777;
+}
+
 .skillsSection .skillsContent__div .js-color {
   color: #F0DB4F;
   text-shadow: 0.25rem 0.2rem #6f641d;
@@ -588,9 +598,9 @@ main .heroSection__li:nth-child(3n+3) {
   text-shadow: 0.25rem 0.2rem #49631c;
 }
 
-.skillsSection .skillsContent__div .mongo-color {
-  color: #118D4D;
-  text-shadow: 0.25rem 0.2rem #135e36;
+.skillsSection .skillsContent__div .cypress-color {
+  color: #04C38E;
+  text-shadow: 0.25rem 0.2rem #20765d;
 }
 
 .skillsSection .skillsContent__div .figma-color {
